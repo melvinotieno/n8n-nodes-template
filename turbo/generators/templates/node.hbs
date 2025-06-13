@@ -1,0 +1,28 @@
+import type {
+  IExecuteFunctions,
+  INodeExecutionData,
+  INodeType,
+  INodeTypeDescription,
+} from "n8n-workflow";
+
+export class {{ pascalCase name }} implements INodeType {
+  description: INodeTypeDescription = {
+    displayName: "{{ titleCase name }}",
+    name: "{{ camelCase name }}",
+    group: ["transform"],
+    version: 1,
+    description: "{{ titleCase name }} node for n8n",
+    defaults: {
+      name: "{{ titleCase name }}",
+    },
+    inputs: ["main"],
+    outputs: ["main"],
+    properties: [],
+  };
+
+  // The function below is responsible for actually doing whatever this node
+	// is supposed to do.
+  async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+    return [];
+  }
+}
