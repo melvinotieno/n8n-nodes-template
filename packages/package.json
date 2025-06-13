@@ -1,0 +1,13 @@
+{
+  "name": "custom-nodes",
+  "private": true,
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "ExampleNode/dist/ExampleNode.credentials.js"
+    ],
+    "nodes": [
+      "ExampleNode/dist/ExampleNode.node.js"
+    ]
+  }
+}
