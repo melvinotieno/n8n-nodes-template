@@ -18,8 +18,7 @@
 		"incremental": true,
 		"declaration": true,
 		"sourceMap": true,
-		"skipLibCheck": true,
-		"outDir": "./dist/"
+		"skipLibCheck": true
   },
-	"exclude": ["node_modules"]
+	"exclude": [".turbo", "dist", "node_modules"]
 }
