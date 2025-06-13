@@ -58,7 +58,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           type: "modify",
           path: "{{ turbo.paths.root }}/packages/package.json",
           pattern: /"credentials": \[/, // Match the "credentials array"
-          template: `"credentials": [\n      "{{ pascalCase name }}/dist/{{ pascalCase name }}.credentials.js",    `,
+          template: `"credentials": [\n      "{{ pascalCase name }}/dist/{{ pascalCase name }}.credentials.js",`,
         });
       }
 
@@ -66,7 +66,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         type: "modify",
         path: "{{ turbo.paths.root }}/packages/package.json",
         pattern: /"nodes": \[/, // Match the "nodes array"
-        template: `"nodes": [\n      "{{ pascalCase name }}/dist/{{ pascalCase name }}.node.js",    `,
+        template: `"nodes": [\n      "{{ pascalCase name }}/dist/{{ pascalCase name }}.node.js",`,
       });
 
       return actions;
