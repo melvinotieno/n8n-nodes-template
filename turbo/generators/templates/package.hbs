@@ -1,0 +1,41 @@
+{
+  "name": "n8n-nodes-{{ dashCase name }}",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "npx rimraf dist && tsc"
+  },
+  "devDependencies": {
+    "@config/typescript": "workspace:*",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/{{ pascalCase name }}.credentials.js"
+    ],
+    "nodes": [
+      "dist/{{ pascalCase name }}.node.js"
+    ]
+  }
+}
