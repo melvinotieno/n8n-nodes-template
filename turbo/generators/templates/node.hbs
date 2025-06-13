@@ -4,6 +4,7 @@ import type {
   INodeType,
   INodeTypeDescription,
 } from "n8n-workflow";
+import { NodeConnectionType } from "n8n-workflow";
 
 export class {{ pascalCase name }} implements INodeType {
   description: INodeTypeDescription = {
@@ -15,8 +16,8 @@ export class {{ pascalCase name }} implements INodeType {
     defaults: {
       name: "{{ titleCase name }}",
     },
-    inputs: ["main"],
-    outputs: ["main"],
+    inputs: [NodeConnectionType.Main],
+    outputs: [NodeConnectionType.Main],
     properties: [],
   };
 
